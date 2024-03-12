@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:qrproject/home.dart';
 
 void main() {
-  runApp(const QrApp());
+  runApp( QrApp());
 }
-class QrApp  extends StatefulWidget {
-  const ({super.key});
+class QrApp extends StatefulWidget {
+  const QrApp({super.key});
 
   @override
-  State<> createState() => _State();
+  State<QrApp> createState() => _QrAppState();
 }
 
-class _State extends State<> {
+class _QrAppState extends State<QrApp> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      home: Home(),
+    );
   }
 }
