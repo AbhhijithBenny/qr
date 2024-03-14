@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
+import 'Rollno.dart';
+import 'camera.dart';
+
 class Qr extends StatefulWidget {
   const Qr({super.key});
 
@@ -18,18 +21,22 @@ class _QrState extends State<Qr> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.network(
-                "https://th.bing.com/th/id/OIP.jAioCeiE6Cwhq9Ph3dee4gHaHa?w=206&h=206&c=7&r=0&o=5&pid=1.7"),
+                "https://th.bing.com/th/id/OIP.jAioCeiE6Cwhq9Ph3dee4gHaHa?w=205&h=205&c=7&r=0&o=5&pid=1.7",),
+
             SizedBox(
-              height: 80,
+              height: 20,
             ),
             QrImageView(
               data: '1234567890',
               version: QrVersions.auto,
-              size: 400.0,
+              size: 250.0,
             ),
-            SizedBox(height: 120,),
+            SizedBox(height: 60,),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder:(context)=>const Rol()),
+                );
+              },
               child: Text('Scan'),
               style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.teal,

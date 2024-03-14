@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:qrproject/Registeration.dart';
 import 'package:qrproject/qrcode.dart';
 
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -57,21 +58,14 @@ class _HomeState extends State<Home> {
             ),
           ),
           SizedBox(height:30 ,),
-          SizedBox(
-            width: 100,
-            child: ElevatedButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder:(context)=>const Qr()),
-              );
-            }, child:  Text('login'),style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.blueAccent,
-              foregroundColor: Colors.amber,
-              shape: RoundedRectangleBorder()
 
-
-
-            ),
-            ),
-          ),
+          SizedBox(height: 20,),
+    ElevatedButton(onPressed: (){
+    Navigator.push(context, MaterialPageRoute(builder:(context)=>const Qr()),
+    );
+    }, child:  Text('login'),style: ElevatedButton.styleFrom(
+    backgroundColor: Colors.blueAccent,
+    foregroundColor: Colors.amber,)),
           SizedBox(height: 20,),
           Text("OR"),
           SizedBox(height: 20,),
@@ -82,6 +76,7 @@ class _HomeState extends State<Home> {
               );
             }, child:  Text('Dont Have An Account'),style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blueAccent,
+                foregroundColor: Colors.amber,
                 shape: RoundedRectangleBorder()
 
 
