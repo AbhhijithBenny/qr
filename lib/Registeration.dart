@@ -39,7 +39,9 @@ class _RegState extends State<Reg> {
     print(data["message"]);
     if(response.statusCode==200) {
       Navigator.push(context, MaterialPageRoute(builder:(context)=>const Home()),
+
       );
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(data["message"])));
     }else{
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(data["message"])));
     }
